@@ -285,9 +285,9 @@
                             <div class="tabnav tabnav6">
                                 <a href="02_basic_info_1.html"><span>Basic info</span></a>
                                 <a href="03_line_manager.html"><span>Line Manager</span></a>
-                                <a href="04_it_infrastructure.html"   class="active"><span>IT infrastructure</span></a>
+                                <a href="04_it_infrastructure.html" ><span>IT infrastructure</span></a>
                                 <a href="05_fm.html"><span>FM data</span></a>
-                                <a href="06_IT_helpdesk.html"><span>IT helpdesk</span></a>
+                                <a href="06_it_helpdesk.html" class="active"><span>IT helpdesk</span></a>
                                 <a href="07_checklist.html"><span>Checklist</span></a>
                                 <span class="clearfix"></span>
                             </div>
@@ -299,183 +299,119 @@
                                 <!--------->
 
 
+
+
                                 <table cellpadding=0 cellspacing=0 border=0 style="width:100%;background-color:#F2F2F2;">
                                     <tr>
-                                        <td colspan=2 style="width:539px;border-right: 2px solid #fff;"><h4 class="ueberschrift">Current mobile phone data  </h4></td>
-                                        <td colspan=2 style="width:539px;border-left: 2px solid #fff;"><h4 class="ueberschrift">New mobile phone data</h4></td>
+                                        <td colspan=2 style="width:539px;border-right: 2px solid #fff;"><h4 class="ueberschrift">Current IT data</h4></td>
+                                        <td colspan=2 style="width:539px;border-left: 2px solid #fff;"><h4 class="ueberschrift">New IT data</h4></td>
                                     </tr>
 
                                     <tr>
-                                        <td class="feldtitel down"><div class="feldinhalt">MOBILE DEVICE:</div></td>
+                                        <td class="feldtitel down"><div class="feldinhalt">HARDWARE:*</div></td>
                                         <td class="borderright eingabefeld down">
-                                            <div class="eingabefeldinhalt">Blackberry Z10</div>
+                                            <div class="eingabefeldinhalt">Notebook</div>
                                         </td>
-                                        <td class="feldtitel borderleft down"><div class="feldinhalt">MOBILE DEVICE:*</div></td>
+                                        <td class="feldtitel borderleft down"><div class="feldinhalt">NEW HARDWARE:*</div></td>
                                         <td class="eingabefeld down">
-                                            <div class="eingabefeldinhalt">
-                                                <input type="radio" name="phone" id="phone" value="no"  style="margin-bottom:4px;margin-right:5px;"> no change &nbsp;&nbsp;&nbsp;&nbsp;
-                                                <input type="radio" name="phone" id="phone" value="new" style="margin-bottom:4px;margin-right:5px;"> new phone
+                                        <div class="eingabefeldinhalt">
+                                                PC
                                             </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="feldtitel up down"><div class="feldinhalt">DEVICE ID:</div></td>
-                                        <td class="borderright eingabefeld down up">
-                                            <div class="eingabefeldinhalt">BB23456k</div>
-                                        </td>
-                                        <td class="feldtitel borderleft down up"><div class="feldinhalt" id="ndid" style="display:none;">NEW DEVICE ID:*</div></td>
-                                        <td class="eingabefeld down up">
-                                            <div class="eingabefeldinhalt" id="ndid2" style="display:none;"  >
-                                                    <input type="text" value="" placeholder="insert new device id" style="width:320px;background-color:#F2F2F2;">
-                                            </div>
+
                                         </td>
                                     </tr>
 
-
-                                    <script>
-                                        $( "input#phone" ).on( "click", function() {
-                                          var selection=$(this).val();
-
-                                          if(selection == "new"){
-                                            $( "#ndid" ).show();
-                                            $( "#ndid2" ).show();
-                                          }
-
-                                          if(selection != "new"){
-                                            $( "#ndid" ).hide();
-                                            $( "#ndid2" ).hide();
-                                          }
-
-                                        });
-                                    </script>
-
-                                    <tr>
+                                    <tr id="hard1">
                                         <td class="feldtitel up"></td>
-                                        <td class="borderright eingabefeld up">
-                                            <div class="eingabefeldinhalt">
-
-
-                                            </div>
-                                        </td>
+                                        <td class="eingabefeld up"><div class="eingabefeldinhalt" style="margin-top:-10px;"><input type="checkbox" name="Typ" value="Deposit"> returned</div></td>
                                         <td class="feldtitel borderleft up"></td>
-                                        <td class="eingabefeld up"></td>
+                                        <td class="eingabefeld up"><div class="eingabefeldinhalt" style="margin-top:-10px;"><input type="checkbox" name="Typ" value="Deposit"> delivered</div></td>
+                                        <div class="eingabefeldinhalt jodel"><div class="eingabe2">
+
+                                            </div>
+                                            </div></td>
                                     </tr>
 
+
+
                                     <tr>
-                                        <td class="feldtitel down"><div class="feldinhalt">PHONE NUMBER:</div></td>
+                                        <td class="feldtitel down"><div class="feldinhalt">DISPLAYS:*</div></td>
                                         <td class="borderright eingabefeld down">
-                                            <div class="eingabefeldinhalt">+43 (0)664 88 913 616</div>
+                                            <div class="eingabefeldinhalt">2</div>
                                         </td>
-                                        <td class="feldtitel borderleft down"><div class="feldinhalt">NEW PHONE NUMBER:*</div></td>
+                                        <td class="feldtitel borderleft down"><div class="feldinhalt">NEW DISPLAYS:*</div></td>
                                         <td class="eingabefeld down">
-                                            <div class="eingabefeldinhalt">
-
-                                                <input type="radio" name="nom" id="nom" value="no"  style="margin-bottom:4px;margin-right:5px;"> no change  &nbsp;&nbsp;&nbsp;&nbsp;
-                                                <input type="radio" name="nom" id="nom" value="new" style="margin-bottom:4px;margin-right:5px;"> new number
-
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="feldtitel up down"><div class="feldinhalt">SIM NO:</div></td>
-                                        <td class="borderright eingabefeld down up">
-                                            <div class="eingabefeldinhalt">64934jdBB</div>
-                                        </td>
-                                        <td class="feldtitel borderleft down up"><div class="feldinhalt" id="sim" style="display:none;">NEW SIM NO:*</div></td>
-                                        <td class="eingabefeld down up">
-                                            <div class="eingabefeldinhalt" id="sim2" style="display:none;">
-                                                    <input type="text" value="" placeholder="insert new sim number" style="width:320px;background-color:#F2F2F2;">
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="feldtitel up down"></td>
-                                        <td class="borderright eingabefeld up down">
-                                            <div class="eingabefeldinhalt">
-
-                                            </div>
-                                        </td>
-                                        <td class="feldtitel borderleft up down"><div class="feldinhalt" id="pin" style="display:none;">NEW PIN:*</div></td>
-                                        <td class="eingabefeld up down">
-                                            <div class="eingabefeldinhalt" id="pin2" style="display:none;">
-                                                <input type="text" value="" placeholder="insert new pin" style="width:320px;background-color:#F2F2F2;">
-
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="feldtitel up down"></td>
-                                        <td class="borderright eingabefeld up down">
-
-                                        </td>
-                                        <td class="feldtitel borderleft up down"><div class="feldinhalt" id="puk" style="display:none;">NEW PUK:*</div></td>
-                                        <td class="eingabefeld up down">
-                                            <div class="eingabefeldinhalt"  id="puk2" style="display:none;">
-                                                <input type="text" value="" placeholder="insert new puk" style="width:320px;background-color:#F2F2F2;">
-
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="feldtitel up "></td>
-                                        <td class="borderright eingabefeld up ">
-
-                                        </td>
-                                        <td class="feldtitel borderleft up "><div class="feldinhalt" id="unlock" style="display:none;">NEW UNLOCK CODE:*</div></td>
-                                        <td class="eingabefeld up ">
-                                            <div class="eingabefeldinhalt"  id="unlock2" style="display:none;">
-                                                <input type="text" value="" placeholder="insert new unlock code" style="width:320px;background-color:#F2F2F2;">
-
-                                            </div>
+                                        <div class="eingabefeldinhalt">
+                                             1
+                                        </div>
                                         </td>
                                     </tr>
 
+                                    <tr id="hard1">
+                                        <td class="feldtitel up"></td>
+                                        <td class="eingabefeld up"><div class="eingabefeldinhalt" style="margin-top:-10px;"><input type="checkbox" name="Typ" value="Deposit"> returned</div></td>
+                                        <td class="feldtitel borderleft up"></td>
+                                        <td class="eingabefeld up"><div class="eingabefeldinhalt" style="margin-top:-10px;"><input type="checkbox" name="Typ" value="Deposit"> delivered</div></td>
+                                        <div class="eingabefeldinhalt jodel"><div class="eingabe2">
+
+                                            </div>
+                                            </div></td>
+                                    </tr>
                                     <script>
-                                        $( "input#nom" ).on( "click", function() {
+                                        $( "input#disp" ).on( "click", function() {
                                           var selection=$(this).val();
 
                                           if(selection == "new"){
-                                            $( "#sim" ).show();
-                                            $( "#sim2" ).show();
-                                            $( "#pin" ).show();
-                                            $( "#pin2" ).show();
-                                            $( "#puk" ).show();
-                                            $( "#puk2" ).show();
-                                            $( "#unlock" ).show();
-                                            $( "#unlock2" ).show();
+                                            $( "#disp1" ).show();
+                                            $( "#disp1 .hurra").html("<select style=\"width:320px;\"><option value=\"\"> -- please choose --</option><option value=\"0_98\">1</option><option value=\"0_94\">2</option><option value=\"1_98\">3</option></select>");
+
+                                            initChoosen('');
                                           }
 
-                                          if(selection != "new"){
-                                            $( "#sim" ).hide();
-                                            $( "#sim2" ).hide();
-                                            $( "#pin" ).hide();
-                                            $( "#pin2" ).hide();
-                                            $( "#puk" ).hide();
-                                            $( "#puk2" ).hide();
-                                            $( "#unlock" ).hide();
-                                            $( "#unlock2" ).hide();
+                                          if(selection == "no"){
+                                            $( "#disp1" ).hide();
                                           }
+
+
 
                                         });
                                     </script>
 
-                                    </table>
+
+
+                                </table>
+
 
                                 <hr style="border:0;margin:10px;">
 
                                 <table cellpadding=0 cellspacing=0 border=0 style="width:100%;background-color:#F2F2F2;">
                                     <tr>
-                                        <td colspan=2 style="width:539px;border-right: 2px solid #fff;"><h4 class="ueberschrift">Current frequent traveler tariff settings</h4></td>
-                                        <td colspan=2 style="width:539px;border-left: 2px solid #fff;"><h4 class="ueberschrift">New frequent traveler tariff settings</h4></td>
+                                        <td colspan=2 style="width:539px;border-right: 2px solid #fff;"><h4 class="ueberschrift">Old file Shares Configuration</h4></td>
+                                        <td colspan=2 style="width:539px;border-left: 2px solid #fff;"><h4 class="ueberschrift">New file Shares Configuration</h4></td>
                                     </tr>
 
                                     <tr>
-                                        <td class="feldtitel"><div class="feldinhalt">ROAMING PACKAGE:</div></td>
+                                        <td class="feldtitel "><div class="feldinhalt">ACCESS UNTIL:</div></td>
                                         <td class="borderright eingabefeld">
-                                            <div class="eingabefeldinhalt">YES - frequent business traveller tariff</div>
+                                            <div class="eingabefeldinhalt">05/08/2014</div>
                                         </td>
-                                        <td class="feldtitel borderleft"><div class="feldinhalt">ROAMING PACKAGE:*</div></td>
-                                        <td class="eingabefeld "><div class="eingabefeldinhalt"><input type="checkbox" name="Typ" value="Deposit"> deactivated</div></td>
+                                        <td class="feldtitel borderleft "><div class="feldinhalt">NEW SHARES:*</div></td>
+                                        <td class="eingabefeld ">
+                                        <div class="eingabefeldinhalt">
+                                                <div class="eingabefeldinhalt" style="width: 354px;"><input type="checkbox" name="Typ" value="Deposit"> ready</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr id="hard1">
+                                        <td class="feldtitel up"></td>
+                                        <td class="eingabefeld up"><div class="eingabefeldinhalt" style="margin-top:-10px;"><input type="checkbox" name="Typ" value="Deposit"> deactivated</div></td>
+                                        <td class="feldtitel borderleft up"></td>
+                                        <td class="eingabefeld up"><div class="eingabefeldinhalt" style="margin-top:-10px;"></div></td>
+                                        <div class="eingabefeldinhalt jodel"><div class="eingabe2">
+
+                                            </div>
+                                            </div></td>
                                     </tr>
 
                                 </table>
@@ -484,105 +420,54 @@
 
                                 <table cellpadding=0 cellspacing=0 border=0 style="width:100%;background-color:#F2F2F2;">
                                     <tr>
-                                        <td colspan=2 style="width:539px;border-right: 2px solid #fff;"><h4 class="ueberschrift">Current phone data</h4></td>
-                                        <td colspan=2 style="width:539px;border-left: 2px solid #fff;"><h4 class="ueberschrift">New phone data</h4></td>
+                                        <td colspan=2 style="width:539px;border-right: 2px solid #fff;"><h4 class="ueberschrift">Current IT Configuration</h4></td>
+                                        <td colspan=2 style="width:539px;border-left: 2px solid #fff;"><h4 class="ueberschrift">New IT Configuration</h4></td>
                                     </tr>
 
-                                    <tr id="hudri">
-                                        <td class="feldtitel "><div class="feldinhalt">PHONE EXTENSION:</div></td>
-                                        <td class="borderright  eingabefeld">
-                                            <div class="eingabefeldinhalt">2345</div>
+                                    <tr>
+                                        <td class="feldtitel"><div class="feldinhalt">ACCOUNT:*</div></td>
+                                        <td class="borderright eingabefeld">
+                                            <div class="eingabefeldinhalt">Citrix</div>
                                         </td>
-                                        <td class="feldtitel  borderleft"><div class="feldinhalt">NEW PHONE EXT.:*</div></td>
-                                        <td class="eingabefeld ">
-                                            <div class="eingabefeldinhalt">
-                                             <input type="radio" name="ext" id="ext" value="no"  style="margin-bottom:4px;margin-right:5px;"> no change  &nbsp;&nbsp;&nbsp;&nbsp;
-                                             <input type="radio" name="ext" id="ext" value="new" style="margin-bottom:4px;margin-right:5px;"> new extension
+                                        <td class="feldtitel borderleft"><div class="feldinhalt">NEW ACCOUNT:*</div></td>
+                                        <td class="eingabefeld">
+                                        <div class="eingabefeldinhalt"><div class="eingabe2">
+                                                VPN
+                                            </div>
                                             </div>
 
                                         </td>
                                     </tr>
 
-                                    <tr id="insext" style="display:none;">
+                                    <tr id="hard1">
                                         <td class="feldtitel up"></td>
-                                        <td class="borderright up eingabefeld">
+                                        <td class="eingabefeld up"><div class="eingabefeldinhalt" style="margin-top:-10px;"><input type="checkbox" name="Typ" value="Deposit"> deactivated</div></td>
+                                        <td class="feldtitel borderleft up"></td>
+                                        <td class="eingabefeld up"><div class="eingabefeldinhalt" style="margin-top:-10px;"><input type="checkbox" name="Typ" value="Deposit"> ready</div></td>
+                                        <div class="eingabefeldinhalt jodel"><div class="eingabe2">
 
+                                            </div>
+                                            </div></td>
+                                    </tr>
+
+                                    <tr id="willnet2">
+                                        <td class="feldtitel"><div class="feldinhalt">PRINTER PIN:</div></td>
+                                        <td class="borderright eingabefeld">
+                                            <div class="eingabefeldinhalt">124567</div>
                                         </td>
-                                        <td class="feldtitel up borderleft"></td>
-                                        <td class="up eingabefeld">
+                                        <td class="feldtitel borderleft"><div class="feldinhalt">NEW PRINTER PIN:*</div></td>
+                                        <td class="eingabefeld">
                                         <div class="eingabefeldinhalt">
-                                             <input type="text" value="" placeholder="insert extension" style="width:330px;background-color:#F2F2F2;">
-                                        </div>
+                                               <input type="radio" name="pw" id="pw" value="no"  style="margin-bottom:4px;margin-right:5px;"> no change  &nbsp;&nbsp;&nbsp;&nbsp;
+                                             <input type="radio" name="pw" id="pw" value="new" style="margin-bottom:4px;margin-right:5px;"> new printer pin
 
+                                            </div>
                                         </td>
                                     </tr>
 
-                                    <script>
-                                        $( "input#ext" ).on( "click", function() {
-                                          var selection=$(this).val();
 
-                                          if(selection == "new"){
-                                            $( "#insext" ).show();
-                                            $( "#hudri td" ).addClass( "down" );
-                                            }
-
-                                          if(selection != "new"){
-                                            $( "#insext" ).hide();
-                                            $( "#hudri td" ).removeClass( "down" );
-                                            }
-
-                                        });
-                                    </script>
-
-                                    <tr id="willnet">
-                                        <td class="feldtitel up "><div class="feldinhalt">PHONE PW:</div></td>
-                                        <td class="borderright eingabefeld up ">
-                                            <div class="eingabefeldinhalt">pass2&!89</div>
-                                        </td>
-                                        <td class="feldtitel borderleft up "><div class="feldinhalt">NEW PHONE PW:*</div></td>
-                                        <td class="eingabefeld up ">
-                                        <div class="eingabefeldinhalt">
-                                             <input type="radio" name="pw" id="pw" value="no"  style="margin-bottom:4px;margin-right:5px;"> no change  &nbsp;&nbsp;&nbsp;&nbsp;
-                                             <input type="radio" name="pw" id="pw" value="new" style="margin-bottom:4px;margin-right:5px;"> new password
-                                        </div>
-
-                                        </td>
-                                    </tr>
-
-                                    <tr id="inspw" style="display:none;">
-                                        <td class="feldtitel up"></td>
-                                        <td class="borderright up eingabefeld">
-
-                                        </td>
-                                        <td class="feldtitel up borderleft"></td>
-                                        <td class="up eingabefeld">
-                                        <div class="eingabefeldinhalt">
-                                             <input type="text" value="" placeholder="insert password" style="width:330px;background-color:#F2F2F2;">
-                                        </div>
-
-                                        </td>
-                                    </tr>
-
-                                    <script>
-                                        $( "input#pw" ).on( "click", function() {
-                                          var selection=$(this).val();
-
-                                          if(selection == "new"){
-                                            $( "#inspw" ).show();
-                                            $( "#willnet td" ).addClass( "down" );
-                                                                                      }
-
-                                          if(selection != "new"){
-                                            $( "#inspw" ).hide();
-                                            $( "#willnet td" ).removeClass( "down" );
-                                                                                  }
-
-                                        });
-                                    </script>
 
                                 </table>
-
-
 
                             <hr style="border:0;margin:10px;">
 
@@ -615,7 +500,6 @@
                                     </tr>
 
                             </table>
-
 
                             </div>
 
@@ -657,10 +541,21 @@
                                                 <input type="checkbox" name="Typ" value="Deposit">
                                             </td>
                                             <td>
-                                                Did the employee receive the <br><i class="fa fa-file-word-o" style="color:#EB552A;font-size:14px;"></i>
-                                                <a href="javascript:void;" style="text-decoration:none;">
-                                                    <span style="color:#EB552A;border-bottom: 1px solid #EB552A;">mobile phone fact sheet</span>
-                                                </a>?
+                                                Has all the hardware been deployed the employee's new working place?
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <hr style="margin-top: 10px; margin-bottom:10px;">
+
+
+                                    <table>
+                                        <tr>
+                                            <td style="vertical-align:top;padding-right:10px;">
+                                                <input type="checkbox" name="Typ" value="Deposit">
+                                            </td>
+                                            <td>
+                                                Has the CMDB inventory list been completely updated?
                                             </td>
                                         </tr>
                                     </table>
