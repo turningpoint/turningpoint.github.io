@@ -337,7 +337,7 @@
                                         </td>
                                         <td class="feldtitel borderleft down up"><div class="feldinhalt" id="ndid" style="display:none;">NEW DEVICE ID:*</div></td>
                                         <td class="eingabefeld down up">
-                                            <div class="eingabefeldinhalt" id="ndid2" style="display:none;"  >
+                                            <div class="eingabefeldinhalt" id="ndid3" style="display:none;"  >
                                                     <input type="text" value="" placeholder="insert new device id" style="width:320px;background-color:#F2F2F2;">
                                             </div>
                                         </td>
@@ -351,11 +351,13 @@
                                           if(selection == "new"){
                                             $( "#ndid" ).show();
                                             $( "#ndid2" ).show();
+                                            $( "#ndid3" ).show();
                                           }
 
                                           if(selection != "new"){
                                             $( "#ndid" ).hide();
                                             $( "#ndid2" ).hide();
+                                            $( "#ndid3" ).hide();
                                           }
 
                                         });
