@@ -446,7 +446,7 @@
                                         </td>
                                     </tr>
 
-                                    <tr id="lostkey"  style="display:none;">>
+                                    <tr id="lostkey"  style="display:none;">
                                         <td class="feldtitel"</td>
                                         <td class="borderright eingabefeld ">
 
@@ -561,6 +561,60 @@
                                             </div>
 </td>
                                     </tr>
+
+
+<tr>
+                                        <td class="feldtitel down"><div class="feldinhalt">ID CARD:</div></td>
+                                        <td class="borderright eingabefeld down">
+                                            <div class="eingabefeldinhalt">YES</div>
+                                        </td>
+                                        <td class="feldtitel borderleft down"><div class="feldinhalt">ID CARD:*</div></td>
+                                        <td class="eingabefeld down">
+                                            <div class="eingabefeldinhalt">
+                                                    <input type="radio" name="key4" id="key4" value="no"  style="margin-bottom:4px;margin-right:5px;"> keep id card  &nbsp;&nbsp;&nbsp;&nbsp;
+                                                <input type="radio" name="key4" id="key4" value="new"  style="margin-bottom:4px;margin-right:5px;"> return id card
+
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr id="cardfeld" style="display:none">
+                                        <td class="feldtitel up down"><div class="feldinhalt"></div></td>
+                                        <td class="borderright eingabefeld up down">
+                                            <div class="eingabefeldinhalt"></div>
+                                        </td>
+                                        <td class="feldtitel borderleft up down"><div class="feldinhalt">NEW ID CARD:</div></td>
+                                        <td class="eingabefeld up down">
+                                        <div class="eingabefeldinhalt">
+                                                 <input type="text" value="" style="width:120px;background-color:#F2F2F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;
+
+                                            </div>
+                                        </td>
+                                    </tr>
+
+
+                                    <script>
+
+                                        $( "input#key4" ).on( "click", function() {
+                                          var selection=$(this).val();
+
+                                          if(selection == "new"){
+                                            $( "#cardfeld" ).show();
+
+                                          }
+
+                                          if(selection != "new"){
+                                            $( "#cardfeld" ).hide();
+                                          }
+
+                                        });
+
+
+                                    </script>
+
+
+
 
 
 
