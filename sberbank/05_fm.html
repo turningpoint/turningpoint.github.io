@@ -337,7 +337,7 @@
                                         <td class="feldtitel up"></td>
                                         <td class="borderright eingabefeld up">
                                                                                  </td>
-                                        <td class="feldtitel borderleft up"><div class="feldinhalt">NEW CARD/TOKEN:*</div></td>
+                                        <td class="feldtitel borderleft up"><div class="feldinhalt">NEW CARD/TOKEN:</div></td>
                                         <td class="eingabefeld up">
                                         <div class="eingabefeldinhalt">
                                                  <input type="text" value="" style="width:120px;background-color:#F2F2F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -432,20 +432,134 @@
                                     </tr>
 
                                     <tr>
-                                        <td class="feldtitel "></td>
+                                        <td class="feldtitel down"><div class="feldinhalt">ROOM KEY NUMBER:</div></td>
+                                        <td class="borderright eingabefeld down">
+                                            <div class="eingabefeldinhalt">23456</div>
+                                        </td>
+                                        <td class="feldtitel borderleft down"><div class="feldinhalt">ROOM KEY NUMBER:*</div></td>
+                                        <td class="eingabefeld down">
+                                            <div class="eingabefeldinhalt">
+                                                    <input type="radio" name="key" value="Kassenpatient"  style="margin-bottom:4px;margin-right:5px;"> keep key number  &nbsp;&nbsp;&nbsp;&nbsp;
+                                                <input type="radio" name="key" value="Kassenpatient"  style="margin-bottom:4px;margin-right:5px;"> return key number
+
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr id="lostkey"  style="display:none;">>
+                                        <td class="feldtitel"</td>
                                         <td class="borderright eingabefeld ">
 
                                         </td>
-                                        <td class="feldtitel borderleft "><div class="feldinhalt">NEW KEY CARD NO.:*</div></td>
+                                        <td class="feldtitel borderleft "><div class="feldinhalt">ROOM KEY NUMBER:*</div></td>
                                         <td class="eingabefeld ">
                                         <div class="eingabefeldinhalt">
-                                                    <input type="text" value="" style="width:120px;background-color:#F2F2F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <input type="text" value="" style="width:120px;background-color:#F2F2F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                     &nbsp;&nbsp;&nbsp;
-                                                    <div style="margin-top:0px;float:right;padding-right:30px;color:#12683F !important;">
-                                                    <i class="fa fa-plus-circle" style="color:#EB552A;font-size:14px;"></i>
-                                                    <span style="color:#EB552A;border-bottom: 1px solid #EB552A;">add another key card</span></div>
+                                                    <div id="deletekey" name="deletekey" style="margin-top:0px;float:right;padding-right:20px;color:#12683F !important;">
+                                                    <i class="fa fa-minus-circle" style="color:#EB552A;font-size:14px;"></i>
+                                                    <span style="color:#EB552A;border-bottom: 1px solid #EB552A;">delete room key</span></div>
                                             </div>
                                         </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="feldtitel"></td>
+                                        <td class="borderright eingabefeld ">
+
+                                        </td>
+                                        <td class="feldtitel borderleft "><div class="feldinhalt"></div></td>
+                                        <td class="eingabefeld ">
+                                        <div class="eingabefeldinhalt">
+                                                    <div style="margin-top:0px;padding-right:0px;color:#12683F !important;" id="anotherkey" name="anotherkey">
+                                                    <i class="fa fa-plus-circle" style="color:#EB552A;font-size:14px;"></i>
+                                                    <span style="color:#EB552A;border-bottom: 1px solid #EB552A;">add another room key</span></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+
+                                    <script>
+
+                                        $( "#anotherkey" ).on( "click", function() {
+
+                                            $( "#lostkey" ).show();
+
+                                        });
+
+                                        $( "#deletekey" ).on( "click", function() {
+
+                                            $( "#lostkey" ).hide();
+
+                                        });
+
+
+                                    </script>
+
+                                    <tr>
+                                        <td class="feldtitel down"><div class="feldinhalt">REMOTE SENDER:</div></td>
+                                        <td class="borderright eingabefeld down">
+                                            <div class="eingabefeldinhalt">YES, No.: 2354282</div>
+                                        </td>
+                                        <td class="feldtitel borderleft down"><div class="feldinhalt">REMOTE SENDER:*</div></td>
+                                        <td class="eingabefeld down">
+                                        <div class="eingabefeldinhalt">
+                                                 <input type="radio" name="sender" id="sender" value="stays"  style="margin-bottom:4px;margin-right:5px;"> keep sender  &nbsp;&nbsp;&nbsp;&nbsp;
+                                                <input type="radio" name="sender" id="sender" value="new"  style="margin-bottom:4px;margin-right:5px;"> return sender
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr id="senderfeld" style="display:none">
+                                        <td class="feldtitel up down"><div class="feldinhalt"></div></td>
+                                        <td class="borderright eingabefeld up down">
+                                            <div class="eingabefeldinhalt"></div>
+                                        </td>
+                                        <td class="feldtitel borderleft up down"><div class="feldinhalt">NEW SENDER NO.:</div></td>
+                                        <td class="eingabefeld up down">
+                                        <div class="eingabefeldinhalt">
+                                                 <input type="text" value="" style="width:120px;background-color:#F2F2F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;
+
+                                            </div>
+                                        </td>
+                                    </tr>
+
+
+                                    <script>
+
+                                        $( "input#sender" ).on( "click", function() {
+                                          var selection=$(this).val();
+
+                                          if(selection == "new"){
+                                            $( "#senderfeld" ).show();
+                                            $( "#remno" ).show();
+
+                                          }
+
+                                          if(selection != "new"){
+                                            $( "#senderfeld" ).hide();
+                                            $( "#remno" ).hide();
+                                          }
+
+                                        });
+
+
+                                    </script>
+
+                                    <tr id="remno" style="display:none;margin-top:-30px;">
+                                        <td class="feldtitel up"><div class="feldinhalt" style="width: 154px;"></div></td>
+                                        <td class="borderright eingabefeld up">
+                                            <div class="eingabefeldinhalt" style="width: 354px;"></div>
+                                        </td>
+                                        <td class="feldtitel borderleft up"><div class="feldinhalt" style="width: 154px;">REMOTE NUMBER.:</div></td>
+                                        <td class="borderright eingabefeld up"><div class="eingabefeldinhalt">
+
+                                                    <div style="margin-top:0px;color:#12683F !important;">
+                                                    <i class="fa fa-upload"  style="color:#EB552A;font-size:14px;"></i>
+                                                    <a href="javascript:void;" id="keymehr2" style="text-decoration:none;"><span style="color:#EB552A;border-bottom: 1px solid #EB552A;">upload remote number</span></a>
+                                            </div>
+</td>
                                     </tr>
 
 
