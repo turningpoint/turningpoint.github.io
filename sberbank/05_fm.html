@@ -743,7 +743,7 @@
                                     </tr>
 
 
-                                    <tr>
+                                    <tr id="fiesmau">
                                         <td class="feldtitel "><div class="feldinhalt">PARKING LOT:</div></td>
                                         <td class="borderright eingabefeld ">
                                             <div class="eingabefeldinhalt">YES, A6548786</div>
@@ -797,6 +797,7 @@
                                             $( "#nps1" ).show();
                                             $( "#nps3" ).show();
                                             $( "#contractpark" ).show();
+                                            $( "#fiesmau td" ).addClass( "down" );
 
                                           }
 
@@ -805,6 +806,7 @@
                                             $( "#nps1" ).hide();
                                             $( "#nps3" ).hide();
                                             $( "#contractpark" ).hide();
+                                            $( "#fiesmau td" ).removeClass( "down" );
 
                                           }
 
@@ -899,11 +901,9 @@
                                         <td class="borderright eingabefeld up">
                                             <div class="eingabefeldinhalt" style="width: 354px;"><i class="fa fa-file-pdf-o" style="font-size:14px;color:#EB552A;"></i> <span style="color:#EB552A;border-bottom: 1px solid #EB552A;">Vertrag_Musterstrasse.pdf</span></div>
                                         </td>
-                                        <td class="feldtitel borderleft up"><div class="feldinhalt" style="width: 154px;"></div></td>
+                                        <td class="feldtitel borderleft up"><div class="feldinhalt" style="width: 154px;">CONTRACT UPLOAD:*</div></td>
                                         <td class="borderright eingabefeld up"><div class="eingabefeldinhalt">
-                                                 <input type="text" value="" style="width:170px;background-color:#F2F2F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    &nbsp;&nbsp;&nbsp;
-                                                    <div style="margin-top:0px;float:right;padding-right:30px;color:#12683F !important;">
+                                                    <div style="margin-top:0px;color:#12683F !important;">
                                                     <i class="fa fa-upload"  style="color:#EB552A;font-size:14px;"></i>
                                                     <a href="javascript:void;" id="keymehr2" style="text-decoration:none;"><span style="color:#EB552A;border-bottom: 1px solid #EB552A;">upload contract</span></a>
                                             </div>
@@ -935,6 +935,18 @@
                                     </tr>
 
                                     <tr>
+                                        <td class="feldtitel down"><div class="feldinhalt" style="width: 154px;">MONTHLY RENT:</div></td>
+                                        <td class="borderright eingabefeld down">
+                                            <div class="eingabefeldinhalt" style="width: 354px;"> <i class="fa fa-eur" style="font-size:16px;color:#696969;"></i>&nbsp;&nbsp;  1250,-</div>
+                                        </td>
+                                        <td class="feldtitel borderleft down"><div class="feldinhalt" style="width: 154px;">NEW MONTHLY RENT:*</div></td>
+                                        <td class="borderright eingabefeld down"><div class="eingabefeldinhalt" style="width: 354px;">
+                                            <i class="fa fa-eur" style="font-size:16px;color:#696969;"></i> &nbsp;&nbsp;
+                                             <input type="text" value="" style="width:120px;background-color:#F2F2F2;" placeholder="insert sum">
+                                        </div></td>
+                                    </tr>
+
+                                    <tr>
                                         <td class="feldtitel down"><div class="feldinhalt" style="width: 154px;">DEPOSIT RETURNED:*</div></td>
                                         <td class="borderright eingabefeld down">
                                             <div class="eingabefeldinhalt" style="width: 354px;"><input type="checkbox" name="Typ" value="Deposit"> YES (EUR 12.000,-)</div>
@@ -943,6 +955,41 @@
                                         <td class="borderright eingabefeld down"><div class="eingabefeldinhalt" style="width: 354px;">
                                             <i class="fa fa-eur" style="font-size:16px;color:#696969;"></i> &nbsp;&nbsp;
                                              <input type="text" value="" style="width:120px;background-color:#F2F2F2;" placeholder="insert sum">
+                                        </div></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="feldtitel down"><div class="feldinhalt" style="width: 154px;">KEYS:</div></td>
+                                        <td class="borderright eingabefeld down">
+                                            <div class="eingabefeldinhalt" style="width: 354px;"> 4</div>
+                                        </td>
+                                        <td class="feldtitel borderleft down"><div class="feldinhalt" style="width: 154px;">KEYS:*</div></td>
+                                        <td class="borderright eingabefeld down"><div class="eingabefeldinhalt" style="width: 354px;">
+
+                                             <input type="checkbox" value="" style="background-color:#F2F2F2;" placeholder="insert sum">&nbsp;&nbsp;returned
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="feldtitel down"><div class="feldinhalt" style="width: 154px;"></div></td>
+                                        <td class="borderright eingabefeld down">
+                                            <div class="eingabefeldinhalt" style="width: 354px;"></div>
+                                        </td>
+                                        <td class="feldtitel borderleft down"><div class="feldinhalt" style="width: 154px;">NEW KEYS:*</div></td>
+                                        <td class="borderright eingabefeld down"><div class="eingabefeldinhalt" style="width: 354px;">
+
+                                             <input type="input" value="" style="background-color:#F2F2F2;" placeholder="insert amount of keys">&nbsp;&nbsp;
+                                        </div></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="feldtitel down"><div class="feldinhalt" style="width: 154px;">APPARTMENT SIZE:</div></td>
+                                        <td class="borderright eingabefeld down">
+                                            <div class="eingabefeldinhalt" style="width: 354px;"> 120 m<sup>2</sup></div>
+                                        </td>
+                                        <td class="feldtitel borderleft down"><div class="feldinhalt" style="width: 154px;">APPARTMENT SIZE:*</div</td>
+                                        <td class="borderright eingabefeld down"><div class="eingabefeldinhalt" style="width: 354px;">
+
+                                             <input type="input" value="" style="background-color:#F2F2F2;" placeholder="insert size">&nbsp;&nbsp;m<sup>2</sup>
                                         </div></td>
                                     </tr>
 
