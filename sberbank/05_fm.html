@@ -559,17 +559,17 @@
                                                     <i class="fa fa-upload"  style="color:#EB552A;font-size:14px;"></i>
                                                     <a href="javascript:void;" id="keymehr2" style="text-decoration:none;"><span style="color:#EB552A;border-bottom: 1px solid #EB552A;">upload remote number</span></a>
                                             </div>
-</td>
+                                            </td>
                                     </tr>
 
 
-<tr>
-                                        <td class="feldtitel down"><div class="feldinhalt">ID CARD:</div></td>
-                                        <td class="borderright eingabefeld down">
+                                    <tr id="exmau">
+                                        <td class="feldtitel "><div class="feldinhalt">ID CARD:</div></td>
+                                        <td class="borderright eingabefeld ">
                                             <div class="eingabefeldinhalt">YES</div>
                                         </td>
-                                        <td class="feldtitel borderleft down"><div class="feldinhalt">ID CARD:*</div></td>
-                                        <td class="eingabefeld down">
+                                        <td class="feldtitel borderleft "><div class="feldinhalt">ID CARD:*</div></td>
+                                        <td class="eingabefeld ">
                                             <div class="eingabefeldinhalt">
                                                     <input type="radio" name="key4" id="key4" value="no"  style="margin-bottom:4px;margin-right:5px;"> keep id card  &nbsp;&nbsp;&nbsp;&nbsp;
                                                 <input type="radio" name="key4" id="key4" value="new"  style="margin-bottom:4px;margin-right:5px;"> return id card
@@ -579,12 +579,12 @@
                                     </tr>
 
                                     <tr id="cardfeld" style="display:none">
-                                        <td class="feldtitel up down"><div class="feldinhalt"></div></td>
-                                        <td class="borderright eingabefeld up down">
+                                        <td class="feldtitel up "><div class="feldinhalt"></div></td>
+                                        <td class="borderright eingabefeld up ">
                                             <div class="eingabefeldinhalt"></div>
                                         </td>
-                                        <td class="feldtitel borderleft up down"><div class="feldinhalt">NEW ID CARD:</div></td>
-                                        <td class="eingabefeld up down">
+                                        <td class="feldtitel borderleft up "><div class="feldinhalt">NEW ID CARD:</div></td>
+                                        <td class="eingabefeld up ">
                                         <div class="eingabefeldinhalt">
                                                  <input type="text" value="" style="width:120px;background-color:#F2F2F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                     &nbsp;&nbsp;&nbsp;
@@ -601,11 +601,14 @@
 
                                           if(selection == "new"){
                                             $( "#cardfeld" ).show();
+                                            $( "#exmau td" ).addClass( "down" );
+
 
                                           }
 
                                           if(selection != "new"){
                                             $( "#cardfeld" ).hide();
+                                            $( "#exmau td" ).removeClass( "down" );
                                           }
 
                                         });
