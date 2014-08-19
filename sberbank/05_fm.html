@@ -326,86 +326,95 @@
                                         <td class="feldtitel borderleft down"><div class="feldinhalt">ACCESS CARD/TOKEN:*</div></td>
                                         <td class="eingabefeld down">
                                         <div class="eingabefeldinhalt">
-                                                 <input type="radio" name="key1" value="Kassenpatient"  style="margin-bottom:4px;margin-right:5px;"> keep card/token  &nbsp;&nbsp;&nbsp;&nbsp;
-                                                <input type="radio" name="key1" value="Kassenpatient"  style="margin-bottom:4px;margin-right:5px;"> return card/token
+                                                 <input type="radio" name="key1" id="key1" value="stays"  style="margin-bottom:4px;margin-right:5px;"> keep card/token  &nbsp;&nbsp;&nbsp;&nbsp;
+                                                <input type="radio" name="key1" id="key1" value="new"  style="margin-bottom:4px;margin-right:5px;"> return card/token
                                             </div>
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td class="feldtitel down"><div class="feldinhalt">ACCESS CARD/TOKEN:</div></td>
-                                        <td class="borderright eingabefeld down">
-                                            <div class="eingabefeldinhalt">key98673A11</div>
-                                        </td>
-                                        <td class="feldtitel borderleft down"><div class="feldinhalt">ACCESS CARD/TOKEN:*</div></td>
-                                        <td class="eingabefeld down">
-                                        <div class="eingabefeldinhalt">
-                                                <input type="radio" name="key2" value="Kassenpatient"  style="margin-bottom:4px;margin-right:5px;"> keep card/token  &nbsp;&nbsp;&nbsp;&nbsp;
-                                                <input type="radio" name="key2" value="Kassenpatient"  style="margin-bottom:4px;margin-right:5px;"> return card/token
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="feldtitel down"><div class="feldinhalt">PIN CODE:</div></td>
-                                        <td class="borderright eingabefeld down">
-                                            <div class="eingabefeldinhalt">34234234</div>
-                                        </td>
-                                        <td class="feldtitel borderleft down"><div class="feldinhalt">PIN CODE:</div></td>
-                                        <td class="eingabefeld down">
-                                        <div class="eingabefeldinhalt">
-                                                 <div class="eingabefeldinhalt"></div>
-                                            </div>
-                                        </td>
-                                    </tr>
 
                                     <tr id="remkey" style="display:none;">
-                                        <td class="feldtitel down"></td>
-                                        <td class="borderright eingabefeld down">
+                                        <td class="feldtitel up"></td>
+                                        <td class="borderright eingabefeld up">
                                                                                  </td>
-                                        <td class="feldtitel borderleft down"><div class="feldinhalt">NEW KEY NUMBER:*</div></td>
-                                        <td class="eingabefeld down">
-                                        <div class="eingabefeldinhalt">
-                                                 <input type="text" value="key34556kl" style="width:120px;background-color:#F2F2F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    &nbsp;&nbsp;&nbsp;
-                                                    <div style="margin-top:0px;float:right;padding-right:30px;color:#12683F !important;">
-                                                    <i class="fa fa-minus-circle"  style="color:#EB552A;font-size:14px;"></i>
-                                                    <a href="javascript:void;" id="keymehr2" style="text-decoration:none;"><span style="color:#EB552A;border-bottom: 1px solid #EB552A;">remove key</span></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="feldtitel down"></td>
-                                        <td class="borderright eingabefeld down">
-                                                                                 </td>
-                                        <td class="feldtitel borderleft down"><div class="feldinhalt">NEW KEY NUMBER:</div></td>
-                                        <td class="eingabefeld down">
+                                        <td class="feldtitel borderleft up"><div class="feldinhalt">NEW CARD/TOKEN:*</div></td>
+                                        <td class="eingabefeld up">
                                         <div class="eingabefeldinhalt">
                                                  <input type="text" value="" style="width:120px;background-color:#F2F2F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                     &nbsp;&nbsp;&nbsp;
-                                                    <div style="margin-top:0px;float:right;padding-right:30px;color:#12683F !important;">
-                                                    <i class="fa fa-plus-circle" style="color:#EB552A;font-size:14px;"></i>
-                                                    <a style="text-decoration:none;" href="javascript:void();)" id="keymehr"><span style="color:#EB552A;border-bottom: 1px solid #EB552A;"  >add another key</span></a>
+
                                             </div>
                                         </td>
                                     </tr>
 
 
                                     <script>
-                                        $( "#keymehr" ).on( "click", function() {
 
-                                            $( "#remkey" ).toggle();
+                                        $( "input#key1" ).on( "click", function() {
+                                          var selection=$(this).val();
+
+                                          if(selection == "new"){
+                                            $( "#remkey" ).show();
+
+                                          }
+
+                                          if(selection != "new"){
+                                            $( "#remkey" ).hide();
+                                          }
 
                                         });
 
-                                        $( "#keymehr2" ).on( "click", function() {
 
-                                            $( "#remkey" ).toggle();
-
-                                        });
                                     </script>
 
+                                    <tr>
+                                        <td class="feldtitel down"><div class="feldinhalt">PIN CODE:</div></td>
+                                        <td class="borderright eingabefeld down">
+                                            <div class="eingabefeldinhalt">pin1234</div>
+                                        </td>
+                                        <td class="feldtitel borderleft down"><div class="feldinhalt">PIN CODE:*</div></td>
+                                        <td class="eingabefeld down">
+                                        <div class="eingabefeldinhalt">
+                                                 <input type="radio" name="pin1" id="pin1" value="stays"  style="margin-bottom:4px;margin-right:5px;"> keep pin  &nbsp;&nbsp;&nbsp;&nbsp;
+                                                <input type="radio" name="pin1" id="pin1" value="new"  style="margin-bottom:4px;margin-right:5px;"> return pin
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr id="pinfeld" style="display:none">
+                                        <td class="feldtitel up"><div class="feldinhalt"></div></td>
+                                        <td class="borderright eingabefeld up">
+                                            <div class="eingabefeldinhalt"></div>
+                                        </td>
+                                        <td class="feldtitel borderleft up"><div class="feldinhalt">NEW PIN CODE:</div></td>
+                                        <td class="eingabefeld up">
+                                        <div class="eingabefeldinhalt">
+                                                 <input type="text" value="" style="width:120px;background-color:#F2F2F2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;
+
+                                            </div>
+                                        </td>
+                                    </tr>
+
+
+                                    <script>
+
+                                        $( "input#pin1" ).on( "click", function() {
+                                          var selection=$(this).val();
+
+                                          if(selection == "new"){
+                                            $( "#pinfeld" ).show();
+
+                                          }
+
+                                          if(selection != "new"){
+                                            $( "#pinfeld" ).hide();
+                                          }
+
+                                        });
+
+
+                                    </script>
 
                                     <tr>
                                         <td class="feldtitel down"><div class="feldinhalt">ROOM KEY NUMBER:</div></td>
