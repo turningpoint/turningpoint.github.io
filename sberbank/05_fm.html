@@ -738,17 +738,17 @@
 
                                 <table cellpadding=0 cellspacing=0 border=0 style="width:100%;background-color:#F2F2F2;">
                                     <tr>
-                                        <td colspan=2 style="width:539px;border-right: 2px solid #fff;"><h4 class="ueberschrift">Current parking lot data</h4></td>
-                                        <td colspan=2 style="width:539px;border-left: 2px solid #fff;"><h4 class="ueberschrift">New parking lot data</h4></td>
+                                        <td colspan=2 style="width:539px;border-right: 2px solid #fff;"><h4 class="ueberschrift">Current parking lot (paid by company)</h4></td>
+                                        <td colspan=2 style="width:539px;border-left: 2px solid #fff;"><h4 class="ueberschrift">New parking lot (paid by company)</h4></td>
                                     </tr>
 
 
                                     <tr>
-                                        <td class="feldtitel down"><div class="feldinhalt">PARKING PRIVILAGE:</div></td>
+                                        <td class="feldtitel down"><div class="feldinhalt">PARKING LOT:</div></td>
                                         <td class="borderright eingabefeld down">
-                                            <div class="eingabefeldinhalt">YES</div>
+                                            <div class="eingabefeldinhalt">YES, A6548786</div>
                                         </td>
-                                        <td class="feldtitel borderleft down"><div class="feldinhalt">PARKING PRIVILAGE:*</div></td>
+                                        <td class="feldtitel borderleft down"><div class="feldinhalt">PARKING LOT:*</div></td>
                                         <td class="eingabefeld down">
                                         <div class="eingabefeldinhalt">
                                                 <input type="radio" name="park" id="park" value="no"   style="margin-bottom:4px;margin-right:5px;"> no change &nbsp;&nbsp;
@@ -758,18 +758,34 @@
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td class="feldtitel up"><div class="feldinhalt">PARKING LOT NO:</div></td>
-                                        <td class="borderright eingabefeld up">
-                                            <div class="eingabefeldinhalt">A67</div>
+                                    <tr >
+                                        <td class="feldtitel up down"><div class="feldinhalt"></div></td>
+                                        <td class="borderright eingabefeld down up">
+                                            <div class="eingabefeldinhalt"></div>
                                         </td>
-                                        <td class="feldtitel borderleft up"><div class="feldinhalt" id="nps" style="display:none;"></div></td>
-                                        <td class="eingabefeld up">
+                                        <td class="feldtitel borderleft down up"><div class="feldinhalt" id="nps" style="display:none;">PARKING LOT NO.:*</div></td>
+                                        <td class="eingabefeld down up">
                                             <div class="eingabefeldinhalt" id="nps1" style="display:none;">
                                                  <input type="text" value="" placeholder="insert new parking lot number" style="width:320px;background-color:#F2F2F2;">
 
                                             </div>
                                         </td>
+                                    </tr>
+
+
+                                    <tr id="contractpark" style="display:none;">
+                                        <td class="feldtitel up"><div class="feldinhalt" style="width: 154px;"></div></td>
+                                        <td class="borderright eingabefeld up">
+                                            <div class="eingabefeldinhalt" style="width: 354px;"></div>
+                                        </td>
+                                        <td class="feldtitel borderleft up"><div class="feldinhalt" style="width: 154px;">CONTRACT:*</div></td>
+                                        <td class="borderright eingabefeld up"><div class="eingabefeldinhalt">
+
+                                                    <div style="margin-top:0px;color:#12683F !important;">
+                                                    <i class="fa fa-upload"  style="color:#EB552A;font-size:14px;"></i>
+                                                    <a href="javascript:void;" id="keymehr2" style="text-decoration:none;"><span style="color:#EB552A;border-bottom: 1px solid #EB552A;">upload contract</span></a>
+                                            </div>
+                                            </td>
                                     </tr>
 
                                     <script>
@@ -779,12 +795,17 @@
                                           if(selection == "new"){
                                             $( "#nps" ).show();
                                             $( "#nps1" ).show();
+                                            $( "#nps3" ).show();
+                                            $( "#contractpark" ).show();
 
                                           }
 
                                           if(selection != "new"){
                                             $( "#nps" ).hide();
                                             $( "#nps1" ).hide();
+                                            $( "#nps3" ).hide();
+                                            $( "#contractpark" ).hide();
+
                                           }
 
 
